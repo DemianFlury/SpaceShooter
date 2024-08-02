@@ -11,8 +11,8 @@ z_index = 1
 position = Vector2(567, 459)
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(576, 329)
-scale = Vector2(1.17, 1.17)
+position = Vector2(638, 361)
+scale = Vector2(1.37, 1.37)
 texture = ExtResource("2_7lf3x")
 
 [node name="Meteor" parent="." instance=ExtResource("3_lyttj")]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://crwtuiorbsreg"]
+[gd_scene load_steps=3 format=3 uid="uid://crwtuiorbsreg"]
 
 [ext_resource type="Texture2D" uid="uid://d2fu7mu37n86n" path="res://Sprites/Ships/playerShip1_green.png" id="1_d6ye6"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_l7w53"]
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_l7w53")
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_d6ye6")
