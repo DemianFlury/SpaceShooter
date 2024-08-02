@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_l7w53"]
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 6
 script = ExtResource("1_l7w53")
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
