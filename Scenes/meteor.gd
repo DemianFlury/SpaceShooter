@@ -26,6 +26,6 @@ func _process(delta):
 	position += Vector2(meteor_direction, 1) * delta * meteor_speed
 	rotate(meteor_rotation * delta)
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	print('u ded boi')
 
