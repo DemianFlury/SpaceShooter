@@ -1,7 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://crwtuiorbsreg"]
+[gd_scene load_steps=8 format=3 uid="uid://crwtuiorbsreg"]
 
 [ext_resource type="Texture2D" uid="uid://d2fu7mu37n86n" path="res://Sprites/Ships/playerShip1_green.png" id="1_d6ye6"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_l7w53"]
+[ext_resource type="Texture2D" uid="uid://637de50382y2" path="res://Sprites/Lasers/laserGreen14.png" id="3_v5ha7"]
+[ext_resource type="Texture2D" uid="uid://cqs0aqtxjlht3" path="res://Sprites/Lasers/laserGreen01.png" id="4_n0lrt"]
+[ext_resource type="Texture2D" uid="uid://drvpktwwkmyfr" path="res://Sprites/Lasers/laserGreen16.png" id="4_r4rji"]
+[ext_resource type="Texture2D" uid="uid://dscpi4slad7mj" path="res://Sprites/Lasers/laserGreen15.png" id="5_6hhkk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qysq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6hhkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n0lrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r4rji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v5ha7")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
@@ -16,8 +40,16 @@ polygon = PackedVector2Array(-8, -37, 8, -37, 12, -12, 36, 2, 44, -7, 49, -6, 46
 [node name="LaserGun" type="Marker2D" parent="."]
 position = Vector2(0, -37)
 
+[node name="LaserGunAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -40)
+scale = Vector2(0.431667, 0.402174)
+sprite_frames = SubResource("SpriteFrames_qysq0")
+frame = 2
+frame_progress = 1.0
+
 [node name="LaserGunTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
+[connection signal="animation_finished" from="LaserGunAnimation" to="." method="_on_laser_gun_animation_animation_finished"]
 [connection signal="timeout" from="LaserGunTimer" to="." method="_on_laser_gun_timer_timeout"]
