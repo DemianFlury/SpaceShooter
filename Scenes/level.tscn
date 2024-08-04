@@ -61,5 +61,10 @@ autostart = true
 
 [node name="Lasers" type="Node2D" parent="."]
 
+[node name="WinTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
 [connection signal="shoot_laser" from="Player" to="." method="_on_player_shoot_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
+[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]

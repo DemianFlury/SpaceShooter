@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsda40r5ad5e1"]
+
+[ext_resource type="Script" path="res://Scenes/game_over.gd" id="1_1kvvi"]
+[ext_resource type="FontFile" uid="uid://bf5use6b88osy" path="res://Sprites/UI/kenvector_future.ttf" id="1_x6opn"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1kvvi")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.0275462, 0.00641825, 0.0331356, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameOver" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_x6opn")
+theme_override_font_sizes/font_size = 75
+text = "Game Over"
+
+[node name="Score" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_x6opn")
+theme_override_font_sizes/font_size = 50
+text = "Score: "
+horizontal_alignment = 1
+
+[node name="Highscore" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_x6opn")
+theme_override_font_sizes/font_size = 30
+text = "Highscore: "
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -132.5
+offset_top = -40.0
+offset_right = 132.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 35
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_x6opn")
+theme_override_font_sizes/font_size = 25
+text = "press space to restart"
+horizontal_alignment = 1
+
+[node name="ResartTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="ResartTimer" to="." method="_on_resart_timer_timeout"]

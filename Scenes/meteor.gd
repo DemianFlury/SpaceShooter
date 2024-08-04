@@ -4,6 +4,8 @@ var meteor_speed: int
 var meteor_rotation: int
 var meteor_direction: float
 
+signal collision
+
 func _ready():
 	var rng := RandomNumberGenerator.new()
 	
@@ -27,5 +29,4 @@ func _process(delta):
 	rotate(meteor_rotation * delta)
 
 func _on_body_entered(_body):
-	print('u ded boi')
-
+	collision.emit()
