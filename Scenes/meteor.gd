@@ -3,6 +3,7 @@ extends Area2D
 var meteor_speed: int
 var meteor_rotation: int
 var meteor_direction: float
+var destroyable: bool
 
 signal collision
 
@@ -21,8 +22,14 @@ func _ready():
 	# randomize direction
 	meteor_direction = rng.randf_range(-0.5, 0.5)
 	# randomize texture
-	var path = "res://Sprites/Meteors/" + str(randi_range(1,8)) + ".png"
+	var number = randi_range(1,8)
+	var path = "res://Sprites/Meteors/" + str(number) + ".png"
 	$MeteorSprite.texture = load(path)
+	# make grey meteors invincible
+	if number < 5:
+		destroyable = true
+	else:
+		destroyable = false
 	
 func _process(delta):
 	position += Vector2(meteor_direction, 1) * delta * meteor_speed
@@ -33,5 +40,5 @@ func _on_body_entered(_body):
 
 func _on_area_entered(area):
 	area.queue_free()
-	queue_free()
-	
+	if destroyable:
+		queue_free()
