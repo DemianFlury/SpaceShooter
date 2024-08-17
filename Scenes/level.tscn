@@ -15,7 +15,7 @@ script = ExtResource("1_b8mv7")
 
 [node name="Player" parent="." instance=ExtResource("1_wktvb")]
 z_index = 1
-position = Vector2(567, 459)
+position = Vector2(640, 550)
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(638, 361)

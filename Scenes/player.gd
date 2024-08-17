@@ -5,11 +5,9 @@ signal shoot_laser(pos)
 var gun_ready := true
 var shot_fired := false
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$LaserGunAnimation.visible = false
 	$LaserGunAnimation.frame = 0
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -24,10 +22,8 @@ func _process(_delta):
 		$LaserGunAnimation.visible = true
 		$LaserGunAnimation.play()
 
-
 func _on_laser_gun_timer_timeout():
 	gun_ready = true
-
 
 func _on_laser_gun_animation_animation_finished():
 	# firing aniomation is done, spawn the laser

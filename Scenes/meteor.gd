@@ -30,3 +30,8 @@ func _process(delta):
 
 func _on_body_entered(_body):
 	collision.emit()
+
+func _on_area_entered(area):
+	area.queue_free()
+	queue_free()
+	
