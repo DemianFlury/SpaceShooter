@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cus3mr4na6ypg"]
+[gd_scene load_steps=7 format=3 uid="uid://cus3mr4na6ypg"]
 
 [ext_resource type="Script" path="res://Scenes/level.gd" id="1_b8mv7"]
 [ext_resource type="PackedScene" uid="uid://crwtuiorbsreg" path="res://Scenes/player.tscn" id="1_wktvb"]
 [ext_resource type="Texture2D" uid="uid://b5mo75a08wvg6" path="res://Sprites/Backgrounds/bg_full.png" id="2_7lf3x"]
+[ext_resource type="PackedScene" uid="uid://c32nbkg8pjact" path="res://Scenes/score_ui.tscn" id="4_hp8e4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbbxr"]
 size = Vector2(10, 720)
@@ -61,10 +62,7 @@ autostart = true
 
 [node name="Lasers" type="Node2D" parent="."]
 
-[node name="WinTimer" type="Timer" parent="."]
-wait_time = 15.0
-autostart = true
+[node name="ScoreUI" parent="." instance=ExtResource("4_hp8e4")]
 
 [connection signal="shoot_laser" from="Player" to="." method="_on_player_shoot_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
-[connection signal="timeout" from="WinTimer" to="." method="_on_win_timer_timeout"]
