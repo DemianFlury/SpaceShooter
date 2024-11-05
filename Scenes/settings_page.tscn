@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://c7fpgex1s6mcl"]
+[gd_scene load_steps=4 format=3 uid="uid://c7fpgex1s6mcl"]
+
+[ext_resource type="Script" path="res://Scenes/settings_page.gd" id="1_7gnk7"]
+[ext_resource type="FontFile" uid="uid://bf5use6b88osy" path="res://Sprites/UI/kenvector_future.ttf" id="1_r5hxe"]
+
+[sub_resource type="Theme" id="Theme_mp07n"]
+default_font = ExtResource("1_r5hxe")
 
 [node name="SettingsPage" type="Control"]
 layout_mode = 3
@@ -7,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7gnk7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -16,3 +23,62 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.227451, 0.180392, 0.247059, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -580.0
+offset_top = -300.0
+offset_right = 580.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainerTitle" type="MarginContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/MarginContainerTitle"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_mp07n")
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+
+[node name="Control" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ButtonSkin" type="Button" parent="ColorRect/VBoxContainer/Control"]
+layout_mode = 2
+offset_top = 35.0
+offset_right = 200.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("1_r5hxe")
+text = "Skin Settings"
+
+[node name="ButtonAudio" type="Button" parent="ColorRect/VBoxContainer/Control"]
+layout_mode = 2
+offset_top = 105.0
+offset_right = 200.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("1_r5hxe")
+text = "Audio Settings"
+
+[node name="ButtonKeybinds" type="Button" parent="ColorRect/VBoxContainer/Control"]
+layout_mode = 2
+offset_top = 175.0
+offset_right = 200.0
+offset_bottom = 225.0
+theme_override_fonts/font = ExtResource("1_r5hxe")
+text = "Keybinds"
+
+[connection signal="button_down" from="ColorRect/VBoxContainer/Control/ButtonSkin" to="." method="_on_button_skin_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/Control/ButtonAudio" to="." method="_on_button_audio_button_down"]
+[connection signal="button_down" from="ColorRect/VBoxContainer/Control/ButtonKeybinds" to="." method="_on_button_keybinds_button_down"]
