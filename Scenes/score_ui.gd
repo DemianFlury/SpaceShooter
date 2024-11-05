@@ -8,3 +8,4 @@ func _on_win_timer_timeout():
 
 func _on_update_score_timer_timeout():
 	$MarginContainer/ScoreLabel.text = str(ceil($WinTimer.time_left))
+	$UpdateScoreTimer.wait_time = 1
