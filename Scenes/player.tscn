@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://crwtuiorbsreg"]
 
-[ext_resource type="Texture2D" uid="uid://d2fu7mu37n86n" path="res://Sprites/Ships/playerShip1_green.png" id="1_d6ye6"]
+[ext_resource type="Texture2D" uid="uid://d2fu7mu37n86n" path="res://Sprites/Ships/Bomber_green.png" id="1_d6ye6"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_l7w53"]
 [ext_resource type="Texture2D" uid="uid://dscpi4slad7mj" path="res://Sprites/Lasers/laserGreen15.png" id="3_g2kl6"]
 [ext_resource type="Texture2D" uid="uid://cqs0aqtxjlht3" path="res://Sprites/Lasers/laserGreen01.png" id="4_6o808"]

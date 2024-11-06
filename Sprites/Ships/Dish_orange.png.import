@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://km8v3x75vd78"
-path="res://.godot/imported/playerShip2_orange.png-b783543b89bb4e88c58141adc1123cca.ctex"
+uid="uid://dacn37semlj1r"
+path="res://.godot/imported/Dish_orange.png-fd7a727395e26da31c113c85a51e50d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ships/playerShip2_orange.png"
-dest_files=["res://.godot/imported/playerShip2_orange.png-b783543b89bb4e88c58141adc1123cca.ctex"]
+source_file="res://Sprites/Ships/Dish_orange.png"
+dest_files=["res://.godot/imported/Dish_orange.png-fd7a727395e26da31c113c85a51e50d5.ctex"]
 
 [params]
 

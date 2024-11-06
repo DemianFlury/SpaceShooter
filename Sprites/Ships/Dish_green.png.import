@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp5dwsjguea2u"
-path="res://.godot/imported/ufoGreen.png-efc22aed449b9c1668532d033fd8450e.ctex"
+path="res://.godot/imported/Dish_green.png-3377479c57a0c2ad89463434cebf666d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ships/ufoGreen.png"
-dest_files=["res://.godot/imported/ufoGreen.png-efc22aed449b9c1668532d033fd8450e.ctex"]
+source_file="res://Sprites/Ships/Dish_green.png"
+dest_files=["res://.godot/imported/Dish_green.png-3377479c57a0c2ad89463434cebf666d.ctex"]
 
 [params]
 

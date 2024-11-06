@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7a3xvv7tcon4"
-path="res://.godot/imported/playerShip3_red.png-cd7c089d8bb40986e79ca0132be431fb.ctex"
+uid="uid://b83alekxak1lu"
+path="res://.godot/imported/Interceptor_orange.png-204323d7f27f4d931f25cc1af222e53d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ships/playerShip3_red.png"
-dest_files=["res://.godot/imported/playerShip3_red.png-cd7c089d8bb40986e79ca0132be431fb.ctex"]
+source_file="res://Sprites/Ships/Interceptor_orange.png"
+dest_files=["res://.godot/imported/Interceptor_orange.png-204323d7f27f4d931f25cc1af222e53d.ctex"]
 
 [params]
 
