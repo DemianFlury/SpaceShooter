@@ -1,11 +1,6 @@
 extends Control
 
 
-func _on_button_skin_button_down():
-	print('skin')
 
-func _on_button_audio_button_down():
-	print('audio')
-
-func _on_button_keybinds_button_down():
-	print('keybinds')
+func _on_option_button_ship_item_selected(index):
+	pass # Replace with function body.
